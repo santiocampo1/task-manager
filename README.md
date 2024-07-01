@@ -20,19 +20,6 @@ This is a full-stack web application built using the MERN (MongoDB, Express, Rea
 - **Backend**: Node.js, Express, MongoDB, Mongoose, JWT
 - **Authentication**: JSON Web Tokens, Cookies
 
-<!-- ## 🚀 Getting Started
-
-To get a local copy of the project up and running, follow these steps:
-
-1. Clone the repository: `git clone git@github.com:santiocampo1/task-manager.git`
-2. Install dependencies for the server: `npm install`
-3. Install dependencies for the client: `cd client && npm install`
-4. Set up your MongoDB connection string in the server `.env` file
-5. Start the server: `cd ../server && npm start`
-6. Start the client: `cd ../client && npm start`
-
-The application should now be running locally at `http://localhost:3000`. -->
-
 ## 🚀 Deployment
 
 This project will be deployed proximately to a hosting platform like GitHub Pages, Netlify, or Vercel. The deployment process will depend on the platform chosen. 🔜
