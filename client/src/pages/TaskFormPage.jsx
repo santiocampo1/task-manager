@@ -3,6 +3,10 @@ import { useTasks } from '../context/TasksContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+dayjs.extend(utc);
+
 const TaskFormPage = () => {
   const { register, handleSubmit, setValue } = useForm();
   const { createTask, getTask, updateTask } = useTasks();
@@ -24,9 +28,15 @@ const TaskFormPage = () => {
 
   const onSubmit = handleSubmit((data) => {
     if (params.id) {
-      updateTask(params.id, data);
+      updateTask(params.id, {
+        ...data,
+        date: dayjs.utc(data.date).format()
+      });
     } else {
-      createTask(data);
+      createTask({
+        ...data,
+        date: dayjs.utc(data.date).format()
+      });
     }
 
     navigate('/tasks');
@@ -43,7 +53,7 @@ const TaskFormPage = () => {
 
         <label htmlFor="date">Date</label>
         <input type="date" {...register('date')} className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2' />
-  
+
         <button className='bg-indigo-500 px-3 py-2 rounded-md'>Save</button>
       </form>
     </div>
