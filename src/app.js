@@ -13,8 +13,10 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://tasksmanagercrud.netlify.app/', 'https://tasksmanager-gilt.vercel.app', 'https://tasksmanager-eget27x7b-santiocampo1s-projects.vercel.app'],
-    credentials: true
+    origin: ['http://localhost:5173', 'https://tasksmanagercrud.netlify.app', 'https://tasksmanager-gilt.vercel.app'],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use('/api', authRoutes);
