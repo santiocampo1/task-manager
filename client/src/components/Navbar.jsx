@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <nav className="bg-zinc-700 my-3 flex justify-between py-5 px-10 rounded-lg">
-            <Link to='/' className="flex gap-x-2">
+            <Link to='/tasks' className="flex gap-x-2">
                 <h1 className="text-2xl font-bold">Tasks Manager</h1>
             </Link>
             <ul className="flex gap-x-2">
@@ -20,7 +20,7 @@ const Navbar = () => {
                             <Link to='/add-task' className="bg-indigo-500 px-4 py-1 rounded-sm">Add Task</Link>
                         </li>
                         <li>
-                            <Link to='/' onClick={() => {
+                            <Link to='/login' onClick={() => {
                                 logout();
                             }}>Logout</Link>
                         </li>
