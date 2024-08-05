@@ -1,9 +1,11 @@
 <div align="center">
   <h1>MERN CRUD Auth</h1>
-  <img src="https://img.shields.io/badge/Status-Work%20In%20Progress-yellow" alt="Status: Work in Progress">
 </div>
 
 This is a full-stack web application built using the MERN (MongoDB, Express, React, Node.js) stack. The application is a task manager that allows users to create, read, update, and delete tasks. It also includes authentication and authorization features using JSON Web Tokens (JWT) and cookies.
+
+[![Done](https://img.shields.io/badge/Status-Done-brightgreen.svg)](https://shields.io/) <br/>
+(Working on deployment)
 
 ## 🌟 Features
 
