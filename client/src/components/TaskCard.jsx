@@ -4,6 +4,10 @@ import days from "dayjs";
 import utc from 'dayjs/plugin/utc';
 days.extend(utc);
 
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+dayjs.extend(utc);
+
 const TaskCard = ({ task }) => {
     const { deleteTask } = useTasks();
 
@@ -16,6 +20,7 @@ const TaskCard = ({ task }) => {
                         deleteTask(task._id);
                     }}>Delete</button>
                     <Link className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" to={`/tasks/${task._id}`}>Edit</Link>
+
                 </div>
             </header>
             <p className="text-slate-300">{task.description}</p>

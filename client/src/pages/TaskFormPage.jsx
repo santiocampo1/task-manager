@@ -38,7 +38,6 @@ const TaskFormPage = () => {
     } else {
       createTask(dataValid);
     }
-
     navigate('/tasks');
   });
 
