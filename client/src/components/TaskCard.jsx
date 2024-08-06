@@ -4,10 +4,6 @@ import days from "dayjs";
 import utc from 'dayjs/plugin/utc';
 days.extend(utc);
 
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-dayjs.extend(utc);
-
 const TaskCard = ({ task }) => {
     const { deleteTask } = useTasks();
 
