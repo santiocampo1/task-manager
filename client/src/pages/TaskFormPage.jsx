@@ -27,16 +27,16 @@ const TaskFormPage = () => {
     loadTask();
   }, []);
 
-  const onSubmit = handleSubmit(async (data) => {
+  const onSubmit = handleSubmit((data) => {
     const dataValid = {
       ...data,
       date: data.date ? dayjs.utc(data.date).format() : dayjs.utc().format(),
     }
 
     if (params.id) {
-      await updateTask(params.id, dataValid);
+      updateTask(params.id, dataValid);
     } else {
-      await createTask(dataValid);
+      createTask(dataValid);
     }
     navigate('/tasks');
   });
@@ -52,9 +52,9 @@ const TaskFormPage = () => {
           <textarea rows='3' placeholder='Description' {...register('description')} className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md m2-2'></textarea>
 
           <label htmlFor="date">Date</label>
-          <input type="date" {...register('date')} className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md m2-2' />
+          <input type="date" {...register('date')} className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2' />
 
-          <button className='bg-indigo-500 px-3 mt-3 py-2 rounded-md'>Save</button>
+          <button className='bg-indigo-500 px-3 py-2 rounded-md'>Save</button>
         </form>
       </div>
     </div>
